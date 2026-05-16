@@ -44,3 +44,6 @@ now your web server working on at
 ```shell
     http://localhost:5173
 ```
+
+### Additional:
+after run backend server open **backend/api-docs.html** file in browser and test api.

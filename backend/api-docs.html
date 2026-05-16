@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>book_store - API Documentation</title>
+    <style>
+        body { margin: 0; padding: 0; }
+        #opencollection-container { width: 100vw; height: 100vh; }
+    </style>
+    <link rel="stylesheet" href="https://cdn.opencollection.com/docs.css">
+    <script src="https://cdn.opencollection.com/docs.js"></script>
+</head>
+<body>
+    <div id="opencollection-container"></div>
+    <script>
+        const collectionData = "opencollection: 1.0.0\ninfo:\n  name: book_store\nconfig:\n  proxy:\n    inherit: true\n    config:\n      protocol: http\n      hostname: ''\n      port: ''\n      auth:\n        username: ''\n        password: ''\n      bypassProxy: ''\nitems:\n  - info:\n      name: create book\n      type: http\n      seq: 1\n    http:\n      method: POST\n      url: http://localhost:5000/book\n      body:\n        type: json\n        data: |+\n          {\n            \"title\": \"DBT 2\",\n            \"description\": \"dbt 2 made by nilesh sir\",\n            \"author\": \"nilesh 2\",\n            \"pages\": 500,\n            \"rating\": 5\n          }\n\n      auth: inherit\n    settings:\n      encodeUrl: true\n      timeout: 0\n      followRedirects: true\n      maxRedirects: 5\n  - info:\n      name: read Books\n      type: http\n      seq: 2\n    http:\n      method: GET\n      url: http://localhost:5000/books\n      auth: inherit\n    settings:\n      encodeUrl: true\n      timeout: 0\n      followRedirects: true\n      maxRedirects: 5\n  - info:\n      name: delete book\n      type: http\n      seq: 4\n    http:\n      method: DELETE\n      url: http://localhost:5000/book/5\n      auth: inherit\n    settings:\n      encodeUrl: true\n      timeout: 0\n      followRedirects: true\n      maxRedirects: 5\n  - info:\n      name: update\n      type: http\n      seq: 6\n    http:\n      method: PUT\n      url: http://localhost:5000/book/8\n      body:\n        type: json\n        data: |-\n          {\n            \"title\": \"DBT 3\",  \n            \"description\": \"dbt made by nilesh sir\",\n            \"author\": \"nilesh\",\n            \"pages\": 500,\n            \"rating\": 5\n          }\n      auth: inherit\n    settings:\n      encodeUrl: true\n      timeout: 0\n      followRedirects: true\n      maxRedirects: 5\n  - info:\n      name: retrieve one book\n      type: http\n      seq: 8\n    http:\n      method: GET\n      url: http://localhost:5000/books/10\n      auth: inherit\n    settings:\n      encodeUrl: true\n      timeout: 0\n      followRedirects: true\n      maxRedirects: 5\nbundled: true\nextensions:\n  bruno:\n    ignore:\n      - node_modules\n      - .git\n    exportedAt: '2026-05-16T19:10:26.316Z'\n    exportedUsing: Bruno/3.3.0\n";
+        new window.OpenCollection({
+            target: document.getElementById('opencollection-container'),
+            opencollection: collectionData,
+            theme: 'light'
+        });
+    </script>
+</body>
+</html>
