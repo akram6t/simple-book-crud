@@ -39,4 +39,8 @@ now open another terminal and go to frontend folder and run frontend web server.
     npm run dev
 ```
 
-# Best of luck
+### step 5:
+now your web server working on at
+```shell
+    http://localhost:5173
+```
