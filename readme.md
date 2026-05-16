@@ -1,10 +1,11 @@
 # Book Storage
 
-## Add book
-## get all books
-## get one book by id
-## delete book by id
-## update book by id
+## Features
+- Add book
+- get all books
+- get one book by id
+- delete book by id
+- update book by id
 
 ### How to run
 
