@@ -23,15 +23,16 @@ git clone https://github.com/akram6t/simple-book-crud.git
 check  **db.sql** file under the *backend* folder and create database and table according to it.
 
 ### step 3:
-go to backend folder and run server using this command
-```javascript
+go to backend folder and run server
+```shell
     cd backend
     npm install
     nodemon server.js
 ```
+
 ### step 4:
-now open another terminal and go to frontend folder and run frontend web server using this command
-```javascript
+now open another terminal and go to frontend folder and run frontend web server.
+```shell
     cd frontend
     npm install
     npm run dev
